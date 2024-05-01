@@ -30,11 +30,15 @@ public class Main {
             System.out.println(nombre + " Es una película retro");
             }
 
-        for (int i = 0; i < 3; i++) {
+        int numUsuariosPorCalificar = 3;
+        while (numUsuariosPorCalificar > 0)
+        {
             Scanner teclado = new Scanner(System.in);
             System.out.println("Ingresa la evaluación que le das a " + nombre);
-        double notaMatrix = teclado.nextDouble();
-        mediaEvaluacionUsuario = mediaEvaluacionUsuario + notaMatrix;
+            double notaMatrix = teclado.nextDouble();
+            mediaEvaluacionUsuario = mediaEvaluacionUsuario + notaMatrix;
+
+            numUsuariosPorCalificar --;
         }
         System.out.println("La media calculada por el usuario para " + nombre + " es " + mediaEvaluacionUsuario / 3);
 
